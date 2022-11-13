@@ -48,8 +48,10 @@
 		"build:vendor-prefixes-style": "postcss -r --no-map style.css assets/css/editor-style-block.css assets/css/editor-style-classic.css",
 		"build:vendor-prefixes-esb": "postcss -r --no-map assets/css/editor-style-block.css ",
 		"build:vendor-prefixes-esc": "postcss -r --no-map assets/css/editor-style-classic.css",
+		"build:scripts": "wp-scripts build",
 		"lint:css": "wp-scripts lint-style 'style.css' 'assets/**/*.css'",
 		"lint:js": "wp-scripts lint-js 'assets/**/*.js'",
-		"lint:pkg-json": "wp-scripts lint-pkg-json"
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"start-build": "wp-scripts start"
 	}
 }

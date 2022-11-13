@@ -1,0 +1,22 @@
+.Slider {
+  overflow: hidden;
+  position: relative;
+
+  .Slider__InnerContainer {
+
+    .Slider__Item {
+      width: 100%;
+
+      img {
+        object-fit: cover;
+        height: 100%;
+        min-width: 16vw;
+
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+}
+
