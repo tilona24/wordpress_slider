@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9317117a-dcd7-48be-981e-060e62cf9104" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/assets/images/left-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/assets/images/right-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/vendor/slick/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/vendor/slick/config.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/vendor/slick/fonts/slick.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/vendor/slick/fonts/slick.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/vendor/slick/fonts/slick.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/vendor/slick/fonts/slick.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/vendor/slick/slick-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/vendor/slick/slick-theme.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/vendor/slick/slick-theme.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/vendor/slick/slick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/vendor/slick/slick.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/vendor/slick/slick.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/vendor/slick/slick.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/vendor/slick/slick.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/twentytwenty/assets/css/the-amazing-sliderman.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/assets/css/the-amazing-sliderman.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/twentytwenty/assets/js/the-amazing-sliderman.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/assets/js/the-amazing-sliderman.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/twentytwenty/inc/the-amazing-sliderman.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/inc/the-amazing-sliderman.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/twentytwenty/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/twentytwenty/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/twentytwenty/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,25 +64,27 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes/twentytwenty/vendor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes/twentytwenty/assets/images" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2021.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\data\72\wordpress_slider\wp-content\themes\twentytwenty\assets\images" />
       <recent name="C:\data\72\wordpress_slider\wp-content\themes\twentytwenty\vendor" />
       <recent name="C:\data\72\wordpress_slider\wp-content\plugins\the-amazing-slider-man\assets\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\data\72\wordpress_slider\wp-content\themes\twentytwenty\assets\images" />
       <recent name="C:\data\72\wordpress_slider\wp-content\themes\twentytwenty\vendor" />
       <recent name="C:\data\72\wordpress_slider\wp-content\themes\twentytwenty\src" />
       <recent name="C:\data\72\wordpress_slider\wp-content\themes\twentytwenty\build" />
       <recent name="C:\data\72\wordpress_slider\wp-content\plugins\simple-slider" />
-      <recent name="C:\data\72\wordpress_slider\wp-content\plugins\the-amazing-slider-man\assets\js" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -74,6 +97,8 @@
       <updated>1668112007690</updated>
       <workItem from="1668112008827" duration="26757000" />
       <workItem from="1668163837146" duration="26352000" />
+      <workItem from="1668587459829" duration="596000" />
+      <workItem from="1668690255229" duration="26699000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1668113176620</created>

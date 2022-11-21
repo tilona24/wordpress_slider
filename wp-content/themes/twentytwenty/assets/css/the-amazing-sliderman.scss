@@ -1,22 +1,42 @@
 .Slider {
-  overflow: hidden;
   position: relative;
+}
 
-  .Slider__InnerContainer {
+.Slider__Item {
+  width: 100%;
 
-    .Slider__Item {
-      width: 100%;
+  img {
+    object-fit: cover;
+    height: 100%;
+    min-width: 16vw;
 
-      img {
-        object-fit: cover;
-        height: 100%;
-        min-width: 16vw;
-
-        &:not(:last-child) {
-          margin-right: 16px;
-        }
-      }
+    &:not(:last-child) {
+      margin-right: 16px;
     }
   }
 }
 
+.Slider__Button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #00A8A4 no-repeat center;
+  background-size: 20px;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  font-size: 0;
+  z-index: 9;
+
+  &--prev {
+    background-image: url('../images/left-arrow.png');
+    left: -10px;
+    right: auto;
+  }
+
+  &--next {
+    background-image: url('../images/right-arrow.png');
+    left: auto;
+    right: -10px;
+  }
+}

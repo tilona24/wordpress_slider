@@ -19,56 +19,73 @@ registerBlockType('the-amazing-sliderman/slider-block', {
     icon: 'slides',
     category: 'media',
     $schema: 'https://schemas.wp.org/trunk/block.json',
-    keywords: ['images', 'photos'],
+    keywords: ['images', 'photo'],
     attributes: {
         images: {
             type: 'array',
             default: [],
-            source: "query",
+            source: 'query',
             query: {
                 url: {
-                    type: "string",
-                    source: "attribute",
-                    selector: "img",
-                    attribute: "src"
+                    type: 'string',
+                    source: 'attribute',
+                    selector: 'img',
+                    attribute: 'src'
                 },
                 id: {
-                    type: "string",
-                    source: "attribute",
-                    selector: "img",
-                    attribute: "data-id"
+                    type: 'string',
+                    source: 'attribute',
+                    selector: 'img',
+                    attribute: 'data-id'
                 },
-                caption: {
-                    type: "string",
-                    source: "html",
-                    selector: ".blocks-gallery-item__caption"
-                }
             },
         },
-    },
-    edit(props) {
-        const hasImages = props.attributes.images.length > 0;
-        if (hasImages) {
-            console.log(props.attributes.images);
+        contents: {
+            type: 'array',
+            default: [],
+            source: 'query',
+            query: {
+                id: {
+                    type: 'string'
+                },
+                text: {
+                    type: 'string'
+                }
+            }
         }
+    },
+    edit(props, setAttributes) {
+        const hasImages = props.attributes.images.length > 0;
+
+        let onChangeSliderContent = (newImages) => props.setAttributes({images: newImages});
+
+        function updateSliderText(event) {
+            let newContents = props.attributes.contents;
+            let contentId = event.target.dataset.id;
+
+            newContents[contentId].id = contentId;
+            newContents[contentId].text = event.target.value;
+            props.setAttributes({contents: newContents});
+        }
+
         return (
             <>
                 <div {...useBlockProps()}>
                     {hasImages && (
-                        <figure className="Slider__InnerContainer">
+                        <div className="Slider__InnerContainer">
                             {props.attributes.images.map((image, index) => (
                                 <div className="Slider__Item">
                                     <img key={index} src={image.url}/>
-                                    <figcaption key={index} role="textbox" aria-multiline="true"
-                                                aria-label="Image caption text"
-                                                contentEditable="true"
-                                                className="block-editor-rich-text__editable rich-text"
-                                                onChange={(newCaption) => image.setAttributes({caption : newCaption})}>
-                                        {image.caption}
-                                    </figcaption>
+                                    <textarea data-id={index} role="textbox" aria-multiline="true"
+                                              aria-label="Slider Image"
+                                              contentEditable="true"
+                                              className="block-editor-rich-text__editable rich-text"
+                                              onChange={updateSliderText}>
+
+                                    </textarea>
                                 </div>
                             ))}
-                        </figure>
+                        </div>
                     )}
                     {!hasImages && (
                         <MediaPlaceholder
@@ -79,7 +96,7 @@ registerBlockType('the-amazing-sliderman/slider-block', {
                                 title: "The Amazing Sliderman",
                                 instructions: "Choose the images",
                             }}
-                            onSelect={(newImages) => props.setAttributes({images: newImages})}
+                            onSelect={onChangeSliderContent}
                         />
                     )}
                 </div>
@@ -95,20 +112,20 @@ registerBlockType('the-amazing-sliderman/slider-block', {
                     .concat("vw"),
             },
         });
-
+        console.log(props.attributes.contents);
         return (
             <div {...blockProps}>
-                <figure className="Slider__InnerContainer" data-direction="right">
+                <div className="Slider__InnerContainer">
                     {props.attributes.images.map((image, index) => (
                         <div className="Slider__Item">
                             <img key={index} src={image.url} data-mediaid={image.id}/>
-                            <figcaption>
-                                {image.caption}
-                            </figcaption>
+                            <p aria-label="Slider Content" contentEditable="false" className="Slider__Content">
+                                {props.attributes.contents[{index}]}
+                            </p>
                         </div>
                     ))}
-                </figure>
+                </div>
             </div>
         );
-    }
+    },
 });
